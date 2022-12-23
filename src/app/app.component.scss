@@ -1,0 +1,237 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.introduce {
+  //   background-image: url("../../assest/images/love.jpeg");
+  width: 100%;
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .title {
+    position: absolute;
+    top: 25%;
+    background: #0a2647;
+    padding: 1rem 3rem;
+    text-transform: capitalize;
+    border-radius: 1rem;
+    color: white;
+    font-size: 2rem;
+  }
+  .start {
+    position: absolute;
+    top: 60%;
+    background: #0a2647;
+    padding: 1rem 3rem;
+    text-transform: capitalize;
+    border-radius: 1rem;
+    a {
+      color: white;
+      font-size: 2rem;
+      text-decoration: none;
+    }
+  }
+}
+
+.map {
+  background-image: url("../assets/images/saleh-ahmed-grnislandmap-allb.jpg");
+  width: 100%;
+  height: 150vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  .avatar {
+    background: url("../assets/images/download.jpeg");
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    left: 18%;
+  }
+  .game {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #3c3530;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #bfbfbf;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.done {
+      background: #aba7a7;
+      opacity: 1;
+      cursor: auto;
+      i {
+        color: #00fe00;
+      }
+    }
+    &.shop {
+      background: gray;
+      color: white;
+      left: 40%;
+      top: 19%;
+      opacity: 1;
+    }
+    &.stage1 {
+      bottom: 16%;
+      left: 33%;
+    }
+    &.stage2 {
+      bottom: 28%;
+      left: 74%;
+    }
+    &.stage3 {
+      bottom: 43%;
+      left: 30%;
+    }
+    &.stage4 {
+      bottom: 67%;
+      left: 45%;
+    }
+    &.stage5 {
+      top: 28%;
+      right: 19%;
+    }
+  }
+}
