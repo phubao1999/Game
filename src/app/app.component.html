@@ -1,15 +1,14 @@
 <div class="map">
-  <div class="game stage1 done">
-    <i class="fa-solid fa-check green"></i>
-  </div>
-  <div class="game stage2" (click)="popup(1)"></div>
-  <div class="game stage3" (click)="popup(2)"></div>
-  <div class="game stage4" (click)="popup(3)"></div>
-  <div class="game stage5" (click)="popup(4)"></div>
-  <div class="game shop">
+  <div class="game stage1" (click)="open(1)"></div>
+  <div class="game stage2" (click)="open(2)"></div>
+  <div class="game stage3" (click)="open(3)"></div>
+  <div class="game stage4" (click)="open(4)"></div>
+  <div class="game stage5" (click)="open(5)"></div>
+  <div class="game shop" (click)="openShop()">
     <i class="fa-solid fa-shop"></i>
   </div>
   <div class="avatar"></div>
 </div>
 
+score: {{ score }}
 <router-outlet></router-outlet>
