@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { QuestionDialogComponent } from './question-dialog/question-dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
+
+  constructor(private modalService: NgbModal) { }
+
   title = 'game';
+
+  score = 0;
 
   get data() {
     if (localStorage.getItem('data')) {
@@ -156,8 +163,14 @@ export class AppComponent implements OnInit {
     localStorage.setItem('data', JSON.stringify(data));
   }
 
-  popup(id: number): void {
-    const question = this.data.find((item: any) => item.id === id);
-    console.log(question)
+
+
+  open(id: number) {
+    const modalRef = this.modalService.open(QuestionDialogComponent)
+    modalRef.componentInstance.data = this.data.find((item: any) => item.id === id);
+    modalRef.result.then(res => {
+      console.log(res)
+
+    })
   }
 }
