@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { QuestionDialogComponent } from './question-dialog/question-dialog.component';
+import { ShopDialogComponent } from './shop-dialog/shop-dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -170,7 +171,11 @@ export class AppComponent implements OnInit {
     modalRef.componentInstance.data = this.data.find((item: any) => item.id === id);
     modalRef.result.then(res => {
       console.log(res)
-
+      // Add Score
     })
+  }
+
+  openShop() {
+    const modalRef = this.modalService.open(ShopDialogComponent)
   }
 }
